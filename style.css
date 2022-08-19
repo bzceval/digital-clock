@@ -13,17 +13,16 @@ body {
     text-align: center;
     overflow: hidden;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-}
-.container h2 {
+.clock h2 {
+    position: relative;
     color: #9d938e;
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: bolder;
     letter-spacing: 4px;
     text-transform: uppercase;
+    display: block;
+    position: relative;
 }
 .clock {
     display: flex;
