@@ -8,15 +8,28 @@ body {
     align-items: center;
     height: 100vh;
     background: url("https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
-    background-repeat: none;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     overflow: hidden;
 }
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 .clock h2 {
     position: relative;
     color: #9d938e;
-    font-size: 20px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: bolder;
     letter-spacing: 4px;
@@ -35,8 +48,8 @@ body {
 .clock span {
     position: relative;
     display: block;
-    width: 80px;
-    height: 70px;
+    width: 200px;
+    height: 100px;
     display: block;
     background: #c3a38e;
     opacity: .8;
@@ -49,21 +62,35 @@ body {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
 }
 .clock .text {
-    height: 30px;
-    font-size: 10px;
+    height: 50px;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     background-color: #47322f;
     color: #c3a38e;
 }
-/* .clock #ampm {
+.clock #ampm {
     position: absolute;
     bottom: 0;
     box-shadow: 2px 1px 4px #47322f;
     text-shadow: 2px 2px 4px #47322f;
-    width: 60px;
-    height: 30px;
+    width: 100px;
+    height: 50px;
     font-size: 20px;
+    font-weight: bold;
     background-color: #606b75;
     color: #c3a38e;
-} */
+}
+@media (max-width: 1005px) {
+    .time {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .clock div {
+        margin-top: 70px;
+        -webkit-box-reflect: none !important;
+    }
+    #ampm {
+        flex-wrap: wrap;
+    }   
+}
